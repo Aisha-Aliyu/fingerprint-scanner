@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Futuristic fingerprint scanner simulation with sci-fi effects. Built with HTML, CSS, and JavaScript." />
+  <meta name="keywords" content="fingerprint scanner, futuristic UI, sci-fi interface, HTML CSS JS project" />
+  <meta name="author" content="Your Name" />
+  <title>Futuristic Fingerprint Scanner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="button" type="button">
+    <span class="status">Press to Scan Fingerprint</span>
+
+    <!-- HUD & Scan -->
+    <div class="ripple-container"></div>
+    <div class="hud-container">
+      <div class="hud-grid"></div>
+      <div class="hud-rings">
+        <div class="hud-ring"></div>
+        <div class="hud-ring" style="width:160px;height:160px;"></div>
+        <div class="hud-ring" style="width:120px;height:120px;"></div>
+      </div>
+      <div class="hud-numbers"></div>
+    </div>
+
+    <div class="scan-line"></div>
+    <div class="shimmer"></div>
+
+    <!-- Fingerprint -->
+    <svg id="scannerSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103.051 102">
+      <g class="prints">
+        <path stroke-linecap="round" stroke-width="2" d="M13.1 52.786s4.367-1.106 4.725-10.829 4.841-22.651 9.107-25.389"/>
+        <path stroke-linecap="round" stroke-width="2" d="M28.984 14.686S40.423-.54 66.58 4.026"/>
+        <path stroke-linecap="round" stroke-width="2" d="M75.173 11.689a43.984 43.984 0 00-19.836-3.077c-9.059.522-17.207 3.674-24.463 12.261-8.447 9.995-8.456 22.215-7.789 31.5.457 6.372-7.166 9.01-9.363 9.326"/>
+      </g>
+    </svg>
+
+    <!-- Progress -->
+    <div class="progress-container"><div class="progress-bar"></div></div>
+    <div class="percentage"></div>
+    <div class="result-icon"></div>
+  </button>
+
+  <!-- Audio -->
+  <audio id="scanSound" src="https://assets.mixkit.co/sfx/preview/mixkit-scanning-sci-fi-alarm-905.mp3"></audio>
+  <audio id="successSound" src="https://assets.mixkit.co/sfx/preview/mixkit-video-game-win-2016.mp3"></audio>
+  <audio id="failSound" src="https://assets.mixkit.co/sfx/preview/mixkit-retro-arcade-lose-2027.mp3"></audio>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
