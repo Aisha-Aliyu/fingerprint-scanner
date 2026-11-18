@@ -1,33 +1,18 @@
-# 🔐 Futuristic Fingerprint Scanner
+# Fingerprint Scanner
 
-A futuristic animated fingerprint scanner built with HTML, CSS, and JavaScript (GSAP).  
-Features sounds, glowing effects, particle animations, and realistic scanning behavior.
+An animated fingerprint scanner for the browser, made with HTML, CSS, JavaScript and GSAP. You press and hold the fingerprint, a scan line runs over it, and you get "access granted" or "access denied" at the end.
 
-## 🚀 Demo
-[Live Demo](https://fingerly.netlify.app)
+Live demo: https://fingerly.netlify.app
 
-## ✨ Features
-- Long-press scan interaction (desktop + mobile)
-- Animated scan line & shimmer effects
-- Particle trails + explosion sparks
-- Access Granted ✅ / Access Denied ❌ states
-- Sound effects for scan, success, and failure
-- Auto-reset glow for continuous scans
+## How it works
 
-## 📂 Project Structure
+- Press and hold the fingerprint to scan. It works with a mouse or a finger.
+- Let go before 100% and the scan pauses.
+- At 100% you get access granted or access denied.
+- The glow resets by itself, so you can scan again straight away.
 
-fingerprint-scanner/
-├── index.html
-├── style.css
-├── script.js
-└── sounds/
+The scan line, shimmer, particles and sparks are all animated with GSAP, and sound effects play along with the scan.
 
-## ⚡ Usage
-- Hold the fingerprint to scan.
-- Release early → scan pauses.
-- Wait till 100% → Access Granted/Denied.
+## Files
 
-## 🛠️ Tech Stack
-- HTML5
-- CSS3
-- JavaScript (GSAP animations)
+Everything lives in `index.html`, `style.css` and `script.js`, with the sound effects in the `sounds` folder. There's no build step, so you can open `index.html` in a browser to try it.
